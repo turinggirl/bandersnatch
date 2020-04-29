@@ -13,7 +13,10 @@ matrix:
     - python: 3.7
       env: TOXENV=lint
     - python: 3.8
-      env: TOXENV=INTEGRATION
+      env:
+        - TOXENV=INTEGRATION
+        - PYTHONFAULTHANDLER=yes
+        - PYTHONWARNINGS=once
     - python: 3.8
       env: TOXENV=py38
     - python: nightly
