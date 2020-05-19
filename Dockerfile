@@ -12,7 +12,7 @@ COPY src /bandersnatch/src
 # OPTIONAL: Include a config file
 # Remember to bind mount the "directory" in bandersnatch.conf
 # Reccomended to bind mount /conf - `runner.py` defaults to look for /conf/bandersnatch.conf
-# ADD bandersnatch.conf /etc
+ADD bandersnatch.conf /etc
 
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install --upgrade -r /bandersnatch/requirements.txt
